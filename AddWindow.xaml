@@ -1,0 +1,23 @@
+﻿<Window x:Class="CarGarage.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarGarage"
+        mc:Ignorable="d"
+        Title="AddWindow" Height="300" Width="400" ResizeMode="NoResize">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 80 0 0">
+            <Label Margin="0 0 30 0" Content="Marka" FontSize="25" Height="35" Padding="2"/>
+            <TextBox  Height="32" Width="200" FontSize="25" Padding="2 0 0 2" FontFamily="Times New Roman" Text="{Binding Marka, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 10 0 0">
+            <Label Margin="0 0 30 0" Content="Model" FontSize="25" Height="35" Padding="2"/>
+            <TextBox Text="{Binding Model, UpdateSourceTrigger=PropertyChanged}" Height="32" Width="200" FontSize="25" Padding="2 0 0 2" FontFamily="Times New Roman"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="-10 40 0 0">
+            <Button Content="Cancel" FontFamily="Times New Roman" Height="32" Width="100" Margin="20 0 0 0 " FontSize="25" Padding="2 0 0 2" Name="Cancel_Button"  Click="Cancel_Button_Click" Background="Red" Foreground="Aquamarine" FontWeight="DemiBold"/>
+            <Button Content="Add" FontFamily="Times New Roman"  Height="32" Width="100" Margin="70 0 0 0 " FontSize="25" Padding="2 0 0 2" Name="Add_Button" Click="Add_Button_Click" Background="Aquamarine" Foreground="Red" FontWeight="DemiBold"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
